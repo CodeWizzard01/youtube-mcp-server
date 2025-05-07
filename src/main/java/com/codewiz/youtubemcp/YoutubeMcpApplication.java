@@ -10,41 +10,41 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class YoutubeMcpApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(YoutubeMcpApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(YoutubeMcpApplication.class, args);
+    }
 
-	@Bean
-	public ToolCallbackProvider youtubeToolsCallbackProvider(
-			YoutubeActivitiesService youtubeActivitiesService,
-			YoutubeChannelService youtubeChannelService,
-			YoutubeCommentsService youtubeCommentsService,
-			YoutubeMetaService youtubeMetaService,
-			YoutubePlaylistItemsService youtubePlaylistItemsService,
-			YoutubePlaylistService youtubePlaylistService,
-			YoutubeThumbnailsService youtubeThumbnailsService,
-			YoutubeVideoDetailsService youtubeVideoDetailsService,
-			YoutubeVideoSearchService youtubeVideoSearchService,
-			YoutubeChannelSectionsService youtubeChannelSectionsService,
-			YoutubeTranscriptionService youtubeTranscriptionService
-	) {
-		var toolCallbackProvider = MethodToolCallbackProvider.builder()
-				.toolObjects(
-					youtubeActivitiesService,
-					youtubeChannelService,
-					youtubeCommentsService,
-					youtubeMetaService,
-					youtubePlaylistItemsService,
-					youtubePlaylistService,
-					youtubeThumbnailsService,
-					youtubeVideoDetailsService,
-					youtubeVideoSearchService,
-					youtubeChannelSectionsService,
-					youtubeTranscriptionService
-				)
-				.build();
-		return toolCallbackProvider;
-	}
+    @Bean
+    public ToolCallbackProvider youtubeToolsCallbackProvider(
+            YoutubeActivitiesService youtubeActivitiesService,
+            YoutubeChannelService youtubeChannelService,
+            YoutubeCommentsService youtubeCommentsService,
+            YoutubeMetaService youtubeMetaService,
+            YoutubePlaylistItemsService youtubePlaylistItemsService,
+            YoutubePlaylistService youtubePlaylistService,
+            YoutubeThumbnailsService youtubeThumbnailsService,
+            YoutubeVideoDetailsService youtubeVideoDetailsService,
+            YoutubeVideoSearchService youtubeVideoSearchService,
+            YoutubeChannelSectionsService youtubeChannelSectionsService,
+            YoutubeTranscriptionService youtubeTranscriptionService
+    ) {
+        var toolCallbackProvider = MethodToolCallbackProvider.builder()
+                .toolObjects(
+                        youtubeVideoSearchService,
+                        youtubeTranscriptionService,
+                        youtubeActivitiesService,
+                        youtubeChannelService,
+                        youtubeCommentsService,
+                        youtubeMetaService,
+                        youtubePlaylistItemsService,
+                        youtubePlaylistService,
+                        youtubeThumbnailsService,
+                        youtubeVideoDetailsService,
+                        youtubeChannelSectionsService
+                )
+                .build();
+        return toolCallbackProvider;
+    }
 
 	/*@Bean
 	public CommandLineRunner testYoutubeTools(YoutubeTools youtubeTools) {
