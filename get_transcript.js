@@ -19,11 +19,8 @@ async function main() {
       const cleanText = entry.text.replace(/&amp;#39;/g, "'").replace(/&amp;#34;/g, '"');
       const timestamp = formatTimestamp(entry.offset);
       
-      console.log(`**[${timestamp}]** ${cleanText}`);
+      console.log(`[${timestamp}] : ${cleanText}`);
       
-      if ((index + 1) % 5 === 0) {
-        console.log('');
-      }
     });
     
   } catch (error) {
