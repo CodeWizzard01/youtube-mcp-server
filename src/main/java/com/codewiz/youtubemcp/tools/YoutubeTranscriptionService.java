@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 @Service
 public class YoutubeTranscriptionService {
 
-
     @Tool(
             name = "youtube_transcript",
             description = "Get transcript for a YouTube video by video ID."
