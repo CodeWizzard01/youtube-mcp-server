@@ -21,8 +21,7 @@ This is certified by [MCP Review](https://mcpreview.com/) : [youtube-mcp-server]
 
 ## Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/glXZ-T38hJg?si=eoY8am_MihsdrmRP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
+https://youtu.be/glXZ-T38hJg
 
 ## Blog
 [YouTube-MCP: A Model Context Protocol Server for YouTube](https://codewiz.info/blog/model-context-protocol/)
