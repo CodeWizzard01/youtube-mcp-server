@@ -2,6 +2,9 @@
 
 MCP(Model Context Protocol) server for Youtube search, transcript etc built using Java MCP SDK and Spring AI. For transcript extraction alone Javascript is used.
 
+This is certified by [MCP Review](https://mcpreview.com/) : [youtube-mcp-server](https://mcpreview.com/mcp-servers/CodeWizzard01/youtube-mcp-server)
+
+
 ## Exposed Tools
 
 - youtube_search: Search for videos on YouTube using a query string.
@@ -16,6 +19,13 @@ MCP(Model Context Protocol) server for Youtube search, transcript etc built usin
 - youtube_activities: List activities for a YouTube channel by channel ID. (Public activities only)
 - youtube_video_categories: List video categories available in a region.
 
+## Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/glXZ-T38hJg?si=eoY8am_MihsdrmRP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+
+## Blog
+[YouTube-MCP: A Model Context Protocol Server for YouTube](https://codewiz.info/blog/model-context-protocol/)
 
 
 ## Running MCP Server and then connecting to it from MCP host
@@ -86,7 +96,7 @@ Now add the below to your MCP config file in any MCP host like Claude desktop or
     "command": "java",
     "args": [
       "-jar", 
-      "/Users/ratheesh/Projects/codewiz/youtube-mcp/target/youtube-mcp-0.0.1-SNAPSHOT.jar"
+      "/Users/codewiz/youtube-mcp/target/youtube-mcp-0.0.1-SNAPSHOT.jar"
     ],
     "env": {
       "YOUTUBE_API_KEY": "<your_api_key_here>"
